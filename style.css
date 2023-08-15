@@ -52,20 +52,30 @@ body {
 
 .main header {
     height: 200px;
+    border-bottom: 3px solid transparent;
 }
 
 .main .content {
     border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
+    border-bottom: 3px solid transparent;
 }
 
 .loudbeat .content {
     border-top: 5px solid #9f76c2;
-    border-bottom: 5px solid #6404ae;
+    border-bottom: 3px solid #6404ae;
+}
+
+.loudbeat header {
+    border-bottom: 3px solid #6404ae;
 }
 
 .main footer {
     height: 150px;
+    border-top: 5px solid transparent;
+}
+
+.loudbeat footer {
+    border-top: 5px solid #9f76c2;
 }
 
 .main header .profile {

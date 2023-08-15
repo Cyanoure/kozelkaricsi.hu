@@ -58,8 +58,6 @@ function drawSpectrum(spectrum, x, y, maxWidth, maxHeight, lineWidth = 2, lines 
     }
 }
 
-const animationOffset = msPerBeat/2;
-
 let prevTime = Date.now();
 let beatCount = 0;
 function render() {
@@ -82,19 +80,15 @@ function render() {
     if (beatCount !== calculatedBeat && mp.isPlaying) {
         beatCount = calculatedBeat;
         if (freqAVG >= 120) {
+            document.body.classList.add("loudbeat");
             setTimeout(()=>{
-                document.body.classList.add("loudbeat");
-                setTimeout(()=>{
-                    document.body.classList.remove("loudbeat");
-                }, msPerBeat/2);
-            }, animationOffset);
-        }
-        setTimeout(()=>{
-            document.body.classList.add("beat");
-            setTimeout(()=>{
-                document.body.classList.remove("beat");
+                document.body.classList.remove("loudbeat");
             }, msPerBeat/2);
-        }, animationOffset);
+        }
+        document.body.classList.add("beat");
+        setTimeout(()=>{
+            document.body.classList.remove("beat");
+        }, msPerBeat/2);
     }
 
     drawSpectrum(frequencyData, 60, 15, canvas.width, canvas.height, 2, 32, delta);
