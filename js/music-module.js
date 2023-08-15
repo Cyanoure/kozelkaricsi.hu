@@ -43,7 +43,7 @@ function drawSpectrum(spectrum, x, y, maxWidth, maxHeight, lineWidth = 2, lines 
     const oldArray = ctx.getImageData(0,0,canvas.width,canvas.height);
     //count through only the alpha pixels
     for(let d=3;d<oldArray.data.length;d+=4){
-        oldArray.data[d] = Math.floor(oldArray.data[d]*Math.max(0, Math.min(1, delta * 30)));
+        oldArray.data[d] = Math.floor(oldArray.data[d]*(1 - Math.max(0, Math.min(1, delta * 30))));
     }
     ctx.putImageData(oldArray,0,0);
 
