@@ -5,7 +5,7 @@ function getBannerTexts() {
         { text: "Üdvözöllek!", duration: 5 },
         { text: "Nyugodtan nézz körül :)", duration: 3 },
         { text: `${getAge()} éves programozó vagyok`, duration: 3 },
-        { text: `info@${document.location.hostname}`, duration: 5 },
+        { text: `info@kozelkaricsi.hu`, duration: 5 },
         { text: "Na még egy szöveg hogy legyen valami tartalom :'D", duration: 3 },
         { text: "Olvasod egyáltalán ezt?", duration: 1 }
     ];
