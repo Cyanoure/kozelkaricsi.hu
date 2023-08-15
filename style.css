@@ -165,6 +165,8 @@ h2 {
     bottom: 0px;
     transition-property: bottom;
     transition-duration: 0.3s;
+    color: white;
+    text-decoration: none;
 }
 
 .oneproject:hover .name, .loudbeat .oneproject .name {
