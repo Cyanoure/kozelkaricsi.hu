@@ -2,17 +2,24 @@ class MusicPlayer {
     audio = null;
     isPlaying = false;
     analyser = null;
-    dataArray = null;
+    dataArray = new Uint8Array(64);
     constructor(uri) {
+        this.uri = uri;
+    }
+
+    /**
+     * Create player
+     */
+    init() {
         /**
-         * Loading audio
-         */
-        const audio = this.audio = new Audio(uri);
-        
+                 * Loading audio
+                 */
+        const audio = this.audio = new Audio(this.uri);
+                
         /**
          * Register audio events
         */
-       audio.addEventListener("playing", e => {
+        audio.addEventListener("playing", e => {
             this.isPlaying = true;
         });
         audio.addEventListener("ended", e => {
@@ -39,21 +46,30 @@ class MusicPlayer {
      * Play audio
      */
     play() {
-        this.audio.play();
+        if (this.audio) {
+            this.audio.play();
+        } else {
+            this.init();
+            this.audio.play();
+        }
     }
 
     /**
      * Stop audio
      */
     stop() {
-        this.audio.stop();
+        if (this.audio) {
+            this.audio.stop();
+        }
     }
 
     /**
      * Pause audio
      */
     pause() {
-        this.audio.pause();
+        if (this.audio) {
+            this.audio.pause();
+        }
     }
 
     /**
@@ -72,7 +88,7 @@ class MusicPlayer {
      * @returns Frequency data array in Uint8Array.
      */
     getFrequencyData() {
-        this.analyser.getByteFrequencyData(this.dataArray);
+        if (this.analyser) this.analyser.getByteFrequencyData(this.dataArray);
         return this.dataArray;
     }
 }
