@@ -77,8 +77,10 @@ function render() {
     });
     const freqAVG = freqSum / frequencyData.length;
 
-    if (offsettedT >= beatCount * msPerBeat && mp.isPlaying) {
-        beatCount++;
+    const calculatedBeat = Math.ceil(offsettedT/msPerBeat);
+
+    if (beatCount !== calculatedBeat && mp.isPlaying) {
+        beatCount = calculatedBeat;
         if (freqAVG >= 120) {
             setTimeout(()=>{
                 document.body.classList.add("loudbeat");
