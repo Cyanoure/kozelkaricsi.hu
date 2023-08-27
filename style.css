@@ -210,6 +210,12 @@ h2 {
     margin-top: -3px;
 }
 
+codersrank-summary {
+    --header-bg-color: #6404ae;
+    --name-font-size: 20px;
+    margin-bottom: 15px;
+}
+
 @media only screen and (max-width: 600px) {
     .main header .banner {
         display: none;

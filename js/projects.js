@@ -8,6 +8,7 @@ function addProjectButton(data, onClick = ()=>{}) {
     item.querySelector(".icon").style.backgroundImage = `url(${data.icon})`;
     item.href = data.url;
     projectsContainer.appendChild(item);
+    item.title = data.description;
 }
 
 fetch("./projects.json").then(response => response.json()).then(json => {
