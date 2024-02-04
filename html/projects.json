@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Forráskód",
+        "url": "https://github.com/Cyanoure/kozelkaricsi.hu",
+        "description": "Ennek a weboldalnak a forráskódja.",
+        "icon": "img/profiletr.png"
+    },
+    {
+        "name": "Chronika",
+        "url": "https://www.chronika.hu/",
+        "description": "Egy egyedi fejlesztésű Minecraft szerverhálózat, ami több féle játékmódot is nyújt, hogy mindenki megtalálhassa magának a szórakozás módját.",
+        "icon": "https://portal.chronika.hu/img/logo.png"
+    },
+    {
+        "name": "Resonance",
+        "url": "https://resonance.kozelkaricsi.hu/",
+        "description": "A Resonance egy magyar, egyszerűen kezelhető zene bot Discord szerverekre.",
+        "icon": "https://resonance.kozelkaricsi.hu/img/logo.png"
+    },
+    {
+        "name": "Hytale-Szerverek",
+        "url": "https://hytale-szerverek.hu/",
+        "description": "A hytale-szerverek.hu oldal lényege, hogy a magyar Hytale szerverek iránt érdeklődő játékosok és a Hytale hirdetői könnyen egymásra találjanak.",
+        "icon": "https://www.hytale.com/static/images/logo-h.png"
+    }
+]
