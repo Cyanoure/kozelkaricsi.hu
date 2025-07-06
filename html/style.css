@@ -91,7 +91,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(img/profiletr.png);
+    background-image: url(img/profile-transparent.gif);
     transition-property: box-shadow, top;
     transition-duration: 0.3s;
     cursor: pointer;

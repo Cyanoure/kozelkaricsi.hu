@@ -9,3 +9,11 @@ const currentYear = (new Date()).getFullYear();
 if (firstYear < currentYear) {
     yearSpan.innerText = `${firstYear} - ${currentYear}`;
 }
+
+/**
+ * Fill age displays
+ */
+const ageDisplays = document.querySelectorAll(".age-display");
+for (const ageDisplay of ageDisplays) {
+    ageDisplay.innerText = getAge();
+}
