@@ -43,11 +43,13 @@ body {
 .main footer {
     width: calc(100% - 30px);
     background-color: #444a;
+    -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     margin: 15px;
     box-sizing: border-box;
     padding: 10px;
     border-radius: 15px;
+    position: relative;
 }
 
 .main header {
@@ -165,6 +167,7 @@ h2, h3 {
 
 .oneproject .name {
     background-color: #0007;
+    -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     border-radius: 30px;
     padding: 5px 10px;
