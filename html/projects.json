@@ -22,5 +22,11 @@
         "url": "https://hytale-szerverek.hu/",
         "description": "A hytale-szerverek.hu oldal lényege, hogy a magyar Hytale szerverek iránt érdeklődő játékosok és a Hytale hirdetői könnyen egymásra találjanak.",
         "icon": "https://www.hytale.com/static/images/logo-h.png"
+    },
+    {
+        "name": "PlasmaBattle",
+        "url": "https://plasmabattle.kozelkaricsi.hu/",
+        "description": "Egy cella háborús hobbiprojekt, amivel kipróbáltam magam a webes játékfejlesztésben. Az nyer, aki a legnagyobb méretűre növekszik.",
+        "icon": "img/projects/plasmabattle-logo.png"
     }
 ]
