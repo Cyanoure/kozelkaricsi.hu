@@ -11,8 +11,20 @@ function addProjectButton(data, onClick = ()=>{}) {
     item.title = data.description;
 }
 
-fetch("./projects.json").then(response => response.json()).then(json => {
-    json.forEach(data => {
+(async () => {
+    let result;
+    let json;
+    try {
+        if (document.location.hash === "#test") {
+            throw new Error("Test mode.");
+        }
+        result = await fetch("https://raw.githubusercontent.com/Cyanoure/kozelkaricsi.hu/refs/heads/main/html/projects.json");
+        json = await result.json();
+    } catch(e) {
+        result = await fetch("./projects.json");
+        json = await result.json();
+    }
+    for (const data of json) {
         addProjectButton(data);
-    });
-});
+    }
+})();
