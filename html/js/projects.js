@@ -25,6 +25,7 @@ function addProjectButton(data, onClick = ()=>{}) {
         json = await result.json();
     }
     for (const data of json) {
+        if (data.hidden) continue;
         addProjectButton(data);
     }
 })();
